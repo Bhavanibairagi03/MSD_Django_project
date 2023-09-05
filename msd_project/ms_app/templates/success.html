@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta aria-checked="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Submite data</h1>
+       {% if request.session.uploaded_file_info %}
+       <p>Title: {{ request.session.uploaded_file_info.title }}</p>
+       <p>Description: {{ request.session.uploaded_file_info.discription }}</p>
+       <img src="{{ request.session.uploaded_file_info.file_path }}" alt="Uploaded Image" height="200" width="300">
+       {% endif %}
+
+        </div>
+    </body>
+</html>
